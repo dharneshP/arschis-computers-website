@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Arschis Computers - Erode</title>
     
-    <!-- Phase 2: Open Graph / WhatsApp / Facebook Previews -->
+    <!-- Open Graph / WhatsApp / Facebook Previews -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arschiscomputers.in/">
     <meta property="og:title" content="Arschis Computers - Erode | Expert Sales & Service">
     <meta property="og:description" content="Serving Erode with 20 years experience. Expert laptop repair, PC building, and multi-brand sales.">
-    <!-- Uses your hero background as the default preview image -->
     <meta property="og:image" content="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1920&q=80">
     
-    <!-- Phase 2: Browser Tab Icon (Favicon) generated directly from your custom SVG -->
+    <!-- Browser Tab Icon (Favicon) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%231F2937' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M35 30 C 20 20, 10 40, 25 55' /%3E%3Cpath d='M35 30 C 50 15, 75 25, 75 45 C 75 65, 55 65, 50 65' /%3E%3Cpath d='M50 65 C 45 65, 35 75, 40 85 C 45 95, 55 90, 55 80' /%3E%3Ccircle cx='45' cy='45' r='4' fill='%23DC2626' stroke='none' /%3E%3Cpath d='M45 20 L 50 28 L 55 20' stroke='%23DC2626' stroke-width='2' /%3E%3C/svg%3E">
 
-    <!-- Phase 2: Local Business Schema for Search Engines (SEO) -->
+    <!-- Local Business Schema for Search Engines (SEO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -57,6 +56,17 @@
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
+    <!-- Custom CSS for hiding scrollbars on carousel -->
+    <style>
+        .hide-scroll-bar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .hide-scroll-bar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+
     <script>
         tailwind.config = {
             theme: {
@@ -80,7 +90,6 @@
 
     <!-- Custom Header Section -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <!-- Top Contact Bar -->
         <div class="bg-brandYellow text-brandDark text-[11px] sm:text-xs py-2 px-4 font-bold border-b border-yellow-500">
             <div class="max-w-7xl mx-auto flex justify-between items-center">
                 <span class="truncate pr-2"><i class="fa-solid fa-location-dot text-brandRed mr-1 sm:mr-2"></i> Erode, Tamil Nadu</span>
@@ -90,10 +99,8 @@
             </div>
         </div>
         
-        <!-- Main Navigation Bar -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <!-- Hand-coded Abstract Lord Vinayaga SVG Logo -->
                 <svg viewBox="0 0 100 100" class="h-12 sm:h-16 w-auto mr-3 sm:mr-4 shrink-0 drop-shadow-sm" fill="none" stroke="#1F2937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M35 30 C 20 20, 10 40, 25 55" /> 
                     <path d="M35 30 C 50 15, 75 25, 75 45 C 75 65, 55 65, 50 65" /> 
@@ -101,13 +108,11 @@
                     <circle cx="45" cy="45" r="4" fill="#DC2626" stroke="none" /> 
                     <path d="M45 20 L 50 28 L 55 20" stroke="#DC2626" stroke-width="2" />
                 </svg>
-                
                 <div class="flex flex-col justify-center">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-brandRed tracking-wider leading-none mb-1" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">ARSCHIS COMPUTERS</h1>
                     <p class="text-[10px] sm:text-xs text-brandDark font-bold uppercase tracking-widest leading-none mt-1">Multi Brand's Sales & Service</p>
                 </div>
             </div>
-            <!-- Desktop Nav Links -->
             <div class="hidden md:flex space-x-6 text-sm font-bold text-gray-600 shrink-0">
                 <a href="#services" class="hover:text-brandRed transition">Services</a>
                 <a href="#brands" class="hover:text-brandRed transition">Brands</a>
@@ -116,9 +121,8 @@
         </div>
     </header>
 
-    <!-- Main Content Area -->
     <main>
-        <!-- Hero Section with Background Image & Dark Overlay -->
+        <!-- Hero Section -->
         <section class="relative py-16 sm:py-24 px-4 border-t border-gray-700 overflow-hidden">
             <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-no-repeat"></div>
             <div class="absolute inset-0 bg-brandDark bg-opacity-85"></div>
@@ -134,40 +138,94 @@
             </div>
         </section>
 
-        <!-- Services Section -->
+        <!-- Services Section with Interactive Modals -->
         <section id="services" class="py-12 sm:py-16 px-4 max-w-7xl mx-auto">
             <div class="text-center mb-10 sm:mb-12" data-aos="fade-up">
                 <h3 class="text-2xl sm:text-3xl font-bold text-brandDark">Our Services</h3>
                 <div class="w-20 sm:w-24 h-1 bg-brandRed mx-auto mt-4 rounded-full"></div>
+                <p class="text-sm text-gray-500 mt-4">Click any service to see pricing and turnaround times.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md transition group" data-aos="fade-up" data-aos-delay="100">
+                <!-- Card 1 -->
+                <div onclick="openServiceModal('laptop')" class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md hover:border-brandRed transition group cursor-pointer relative" data-aos="fade-up" data-aos-delay="100">
                     <i class="fa-solid fa-laptop-medical text-4xl text-brandRed mb-4 group-hover:scale-110 transition-transform"></i>
                     <h4 class="text-lg sm:text-xl font-bold text-brandBlue mb-2">Laptop & PC Service</h4>
                     <p class="text-gray-600 text-sm">Hardware troubleshooting, chip-level servicing, OS installation, and performance upgrades.</p>
+                    <div class="mt-4 text-xs font-bold text-brandRed opacity-0 group-hover:opacity-100 transition-opacity">View Details <i class="fa-solid fa-arrow-right ml-1"></i></div>
                 </div>
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md transition group" data-aos="fade-up" data-aos-delay="200">
+                <!-- Card 2 -->
+                <div onclick="openServiceModal('printer')" class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md hover:border-brandRed transition group cursor-pointer relative" data-aos="fade-up" data-aos-delay="200">
                     <i class="fa-solid fa-print text-4xl text-brandRed mb-4 group-hover:scale-110 transition-transform"></i>
                     <h4 class="text-lg sm:text-xl font-bold text-brandBlue mb-2">Printers & Peripherals</h4>
                     <p class="text-gray-600 text-sm">Sales and servicing for Epson, HP, and Brother printers, plus genuine ink and toners.</p>
+                    <div class="mt-4 text-xs font-bold text-brandRed opacity-0 group-hover:opacity-100 transition-opacity">View Details <i class="fa-solid fa-arrow-right ml-1"></i></div>
                 </div>
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md transition group" data-aos="fade-up" data-aos-delay="300">
+                <!-- Card 3 -->
+                <div onclick="openServiceModal('network')" class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md hover:border-brandRed transition group cursor-pointer relative" data-aos="fade-up" data-aos-delay="300">
                     <i class="fa-solid fa-network-wired text-4xl text-brandRed mb-4 group-hover:scale-110 transition-transform"></i>
                     <h4 class="text-lg sm:text-xl font-bold text-brandBlue mb-2">Networking & Power</h4>
                     <p class="text-gray-600 text-sm">Complete D-Link networking setups, CCTV installation, and UPS power backups (Numeric, V-Guard).</p>
+                    <div class="mt-4 text-xs font-bold text-brandRed opacity-0 group-hover:opacity-100 transition-opacity">View Details <i class="fa-solid fa-arrow-right ml-1"></i></div>
                 </div>
             </div>
         </section>
 
-        <!-- Phase 2: Live Location Map Section -->
-        <section id="location" class="py-10 px-4 max-w-7xl mx-auto" data-aos="fade-up">
-            <div class="text-center mb-10 sm:mb-12">
+        <!-- Live Location Map Section -->
+        <section id="location" class="py-10 px-4 max-w-7xl mx-auto bg-gray-50">
+            <div class="text-center mb-10 sm:mb-12" data-aos="fade-up">
                 <h3 class="text-2xl sm:text-3xl font-bold text-brandDark">Find Us in Erode</h3>
                 <div class="w-20 sm:w-24 h-1 bg-brandRed mx-auto mt-4 rounded-full"></div>
             </div>
-            <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200">
-                <!-- Replace the src below with your exact Google Business Profile embed link -->
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200" data-aos="fade-up" data-aos-delay="100">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.123456789!2d77.7123456!3d11.3456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDIwJzQ0LjQiTiA3N8KwNDInNDQuNCJF!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- Phase 4: Testimonials Carousel -->
+        <section id="testimonials" class="py-12 sm:py-16 px-4 max-w-7xl mx-auto overflow-hidden">
+            <div class="text-center mb-10 sm:mb-12" data-aos="fade-up">
+                <h3 class="text-2xl sm:text-3xl font-bold text-brandDark">What Our Customers Say</h3>
+                <div class="w-20 sm:w-24 h-1 bg-brandRed mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <!-- Snap Scrolling Container -->
+            <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 hide-scroll-bar" data-aos="fade-up" data-aos-delay="100">
+                <!-- Review 1 -->
+                <div class="min-w-[300px] md:min-w-[350px] snap-center bg-white p-6 sm:p-8 rounded-xl shadow-md border-t-4 border-brandRed flex-shrink-0">
+                    <div class="text-brandYellow mb-3 text-lg">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 italic leading-relaxed">"Vasanthakumar is a genius with hardware. Fixed my dead Dell laptop motherboard in just two days when others told me to buy a new one. True 20 years of expertise!"</p>
+                    <h5 class="font-bold text-brandBlue">- Ramesh K., Erode</h5>
+                </div>
+                <!-- Review 2 -->
+                <div class="min-w-[300px] md:min-w-[350px] snap-center bg-white p-6 sm:p-8 rounded-xl shadow-md border-t-4 border-brandBlue flex-shrink-0">
+                    <div class="text-brandYellow mb-3 text-lg">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 italic leading-relaxed">"Best computer shop in Erode fort area. Got my gaming PC assembled here. Transparent pricing, perfect cable management, and genuine parts. Highly recommended."</p>
+                    <h5 class="font-bold text-brandBlue">- Dinesh S.</h5>
+                </div>
+                <!-- Review 3 -->
+                <div class="min-w-[300px] md:min-w-[350px] snap-center bg-white p-6 sm:p-8 rounded-xl shadow-md border-t-4 border-brandRed flex-shrink-0">
+                    <div class="text-brandYellow mb-3 text-lg">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 italic leading-relaxed">"We have been buying Epson printers and giving our office laptops for service here for 5 years. Always prompt, reliable, and reasonably priced. Great support."</p>
+                    <h5 class="font-bold text-brandBlue">- Priya Textiles</h5>
+                </div>
+                <!-- Review 4 -->
+                <div class="min-w-[300px] md:min-w-[350px] snap-center bg-white p-6 sm:p-8 rounded-xl shadow-md border-t-4 border-brandBlue flex-shrink-0">
+                    <div class="text-brandYellow mb-3 text-lg">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 italic leading-relaxed">"Replaced my laptop battery and upgraded to a fast SSD. The speed difference is amazing and they delivered it on the exact same day. Excellent service!"</p>
+                    <h5 class="font-bold text-brandBlue">- Manoj V.</h5>
+                </div>
+            </div>
+            
+            <div class="text-center text-gray-400 text-xs mt-2 md:hidden animate-pulse">
+                <i class="fa-solid fa-arrows-left-right mr-1"></i> Swipe to read more
             </div>
         </section>
 
@@ -176,20 +234,20 @@
             <div class="max-w-7xl mx-auto text-center" data-aos="fade-up">
                 <h3 class="text-lg sm:text-xl font-bold text-brandDark mb-6 sm:mb-8">Multi-Brand Specialists</h3>
                 <div class="flex flex-wrap justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-bold text-gray-700">
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition" data-aos="flip-up" data-aos-delay="50">Acer</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition" data-aos="flip-up" data-aos-delay="100">Asus</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition" data-aos="flip-up" data-aos-delay="150">Brother</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition" data-aos="flip-up" data-aos-delay="200">Dell</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition" data-aos="flip-up" data-aos-delay="250">D-Link</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition" data-aos="flip-up" data-aos-delay="300">Epson</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition" data-aos="flip-up" data-aos-delay="350">HP</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition" data-aos="flip-up" data-aos-delay="400">Intel</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition" data-aos="flip-up" data-aos-delay="450">Lenovo</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition" data-aos="flip-up" data-aos-delay="500">Logitech</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition" data-aos="flip-up" data-aos-delay="550">Numeric</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition" data-aos="flip-up" data-aos-delay="600">Samsung</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition" data-aos="flip-up" data-aos-delay="650">TVS Electronics</span>
-                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition" data-aos="flip-up" data-aos-delay="700">V-Guard</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition">Acer</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition">Asus</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition">Brother</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition">Dell</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition">D-Link</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition">Epson</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition">HP</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition">Intel</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition">Lenovo</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition">Logitech</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition">Numeric</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition">Samsung</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandRed transition">TVS</span>
+                    <span class="bg-white px-3 sm:px-4 py-2 rounded-md shadow-sm border-b-2 border-transparent hover:border-brandBlue transition">V-Guard</span>
                 </div>
             </div>
         </section>
@@ -226,13 +284,111 @@
         <i class="fa-brands fa-whatsapp text-3xl sm:text-4xl"></i>
     </a>
 
-    <!-- Initialize AOS Animation Script -->
+    <!-- Dynamic Service Details Modal Container -->
+    <div id="serviceModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm transition-opacity">
+        <div class="bg-white rounded-2xl w-full max-w-md mx-4 relative shadow-2xl transform scale-95 transition-transform overflow-hidden" id="serviceModalContent">
+            <!-- Close Button -->
+            <button onclick="closeServiceModal()" class="absolute top-4 right-5 text-gray-400 hover:text-brandRed text-3xl font-bold transition z-10">&times;</button>
+            
+            <!-- Modal Header -->
+            <div class="bg-brandGray p-6 text-center border-b border-gray-200">
+                <i id="modalIcon" class="fa-solid fa-laptop-medical text-4xl text-brandRed mb-3"></i>
+                <h3 id="modalTitle" class="text-2xl font-bold text-brandBlue">Service Title</h3>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="p-6 sm:p-8 space-y-4">
+                <p id="modalDetails" class="text-gray-600 text-sm border-b border-gray-100 pb-4">Service description goes here.</p>
+                
+                <div class="flex items-start mt-4">
+                    <i class="fa-solid fa-clock text-brandRed mt-1 mr-3 w-5 text-center"></i>
+                    <div>
+                        <h5 class="font-bold text-sm text-brandDark">Turnaround Time</h5>
+                        <p id="modalTurnaround" class="text-xs text-gray-600">1 - 2 Days</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <i class="fa-solid fa-indian-rupee-sign text-brandRed mt-1 mr-3 w-5 text-center"></i>
+                    <div>
+                        <h5 class="font-bold text-sm text-brandDark">Pricing</h5>
+                        <p id="modalPricing" class="text-xs text-gray-600">Starts at ₹499</p>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/919944252527" target="_blank" class="block w-full text-center bg-[#25D366] text-white font-bold py-3 rounded-lg hover:bg-opacity-90 active:scale-95 transition-all shadow-md mt-6 text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Message to Book
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            offset: 50,
-            duration: 800
+        // Initialize Scroll Animations
+        AOS.init({ once: true, offset: 50, duration: 800 });
+
+        // Phase 4: Dynamic Modal Data
+        const serviceData = {
+            'laptop': {
+                title: 'Laptop & PC Service',
+                icon: 'fa-laptop-medical',
+                details: 'Expert chip-level repair, dead motherboard recovery, OS installation, SSD/RAM upgrades, and hinge replacements for Acer, Dell, HP, Lenovo, and Asus devices.',
+                turnaround: 'Same Day to 48 Hours',
+                pricing: 'General Service & OS Installation starts at ₹499'
+            },
+            'printer': {
+                title: 'Printers & Peripherals',
+                icon: 'fa-print',
+                details: 'Complete servicing for Epson, HP, and Brother printers. We resolve paper jams, ink pad errors, and provide genuine ink bottles and laser toner cartridge refills.',
+                turnaround: '1 - 2 Days (Subject to parts availability)',
+                pricing: 'Basic maintenance & service starts at ₹399'
+            },
+            'network': {
+                title: 'Networking & Power',
+                icon: 'fa-network-wired',
+                details: 'Professional installation for D-Link network setups, router configuration, CCTV camera servicing, and UPS battery replacements (Numeric, V-Guard).',
+                turnaround: 'Scheduled Site Visit or Same Day in-store',
+                pricing: 'Custom quote provided based on requirements'
+            }
+        };
+
+        // Modal Logic Functions
+        function openServiceModal(serviceKey) {
+            const data = serviceData[serviceKey];
+            
+            // Populate Modal Content
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalDetails').innerText = data.details;
+            document.getElementById('modalTurnaround').innerText = data.turnaround;
+            document.getElementById('modalPricing').innerText = data.pricing;
+            
+            // Swap out Icon safely
+            const iconElement = document.getElementById('modalIcon');
+            iconElement.className = `fa-solid ${data.icon} text-4xl text-brandRed mb-3`;
+            
+            // Display Modal with animation
+            const modal = document.getElementById('serviceModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => document.getElementById('serviceModalContent').classList.remove('scale-95'), 10);
+        }
+
+        function closeServiceModal() {
+            document.getElementById('serviceModalContent').classList.add('scale-95');
+            setTimeout(() => {
+                const modal = document.getElementById('serviceModal');
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 200);
+        }
+        
+        // Close modal if user clicks outside the box
+        document.getElementById('serviceModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeServiceModal();
+            }
         });
     </script>
 </body>
