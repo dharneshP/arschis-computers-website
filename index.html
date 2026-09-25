@@ -170,62 +170,43 @@
             </div>
         </section>
 
-        <!-- Live Location Map Section (UPDATED) -->
+        <!-- Live Location Map Section -->
         <section id="location" class="py-10 px-4 max-w-7xl mx-auto bg-gray-50">
             <div class="text-center mb-10 sm:mb-12" data-aos="fade-up">
                 <h3 class="text-2xl sm:text-3xl font-bold text-brandDark">Find Us in Erode</h3>
                 <div class="w-20 sm:w-24 h-1 bg-brandRed mx-auto mt-4 rounded-full"></div>
             </div>
             <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200" data-aos="fade-up" data-aos-delay="100">
-                <!-- Dynamically embedded map pulling Arschis Computers exact location pin -->
                 <iframe src="https://maps.google.com/maps?q=Arschis+Computers,+Erode,+Tamil+Nadu&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
-        <!-- Testimonials Carousel -->
+        <!-- Live Google Reviews Carousel -->
         <section id="testimonials" class="py-12 sm:py-16 px-4 max-w-7xl mx-auto overflow-hidden">
             <div class="text-center mb-10 sm:mb-12" data-aos="fade-up">
                 <h3 class="text-2xl sm:text-3xl font-bold text-brandDark">What Our Customers Say</h3>
                 <div class="w-20 sm:w-24 h-1 bg-brandRed mx-auto mt-4 rounded-full"></div>
             </div>
             
-            <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 hide-scroll-bar" data-aos="fade-up" data-aos-delay="100">
-                <!-- Review 1 -->
-                <div class="min-w-[300px] md:min-w-[350px] snap-center bg-white p-6 sm:p-8 rounded-xl shadow-md border-t-4 border-brandRed flex-shrink-0">
-                    <div class="text-brandYellow mb-3 text-lg">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <div class="relative px-2 sm:px-8" data-aos="fade-up" data-aos-delay="100">
+                <!-- Left Navigation Arrow -->
+                <button onclick="scrollReviews('left')" class="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 z-20 bg-white text-brandBlue shadow-[0_0_15px_rgba(0,0,0,0.15)] rounded-full w-10 h-10 flex items-center justify-center hover:bg-brandRed hover:text-white transition-colors border border-gray-200" aria-label="Scroll left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <!-- Dynamic Reviews Container -->
+                <div id="reviews-container" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 pt-2 hide-scroll-bar px-4">
+                    <!-- Loading State -->
+                    <div class="w-full text-center text-gray-500 py-8">
+                        <i class="fa-solid fa-spinner fa-spin text-3xl mb-3 text-brandRed"></i>
+                        <p>Loading live reviews from Google Maps...</p>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4 italic leading-relaxed">"Vasanthakumar is a genius with hardware. Fixed my dead Dell laptop motherboard in just two days when others told me to buy a new one. True 20 years of expertise!"</p>
-                    <h5 class="font-bold text-brandBlue">- Ramesh K., Erode</h5>
                 </div>
-                <!-- Review 2 -->
-                <div class="min-w-[300px] md:min-w-[350px] snap-center bg-white p-6 sm:p-8 rounded-xl shadow-md border-t-4 border-brandBlue flex-shrink-0">
-                    <div class="text-brandYellow mb-3 text-lg">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4 italic leading-relaxed">"Best computer shop in Erode fort area. Got my gaming PC assembled here. Transparent pricing, perfect cable management, and genuine parts. Highly recommended."</p>
-                    <h5 class="font-bold text-brandBlue">- Dinesh S.</h5>
-                </div>
-                <!-- Review 3 -->
-                <div class="min-w-[300px] md:min-w-[350px] snap-center bg-white p-6 sm:p-8 rounded-xl shadow-md border-t-4 border-brandRed flex-shrink-0">
-                    <div class="text-brandYellow mb-3 text-lg">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4 italic leading-relaxed">"We have been buying Epson printers and giving our office laptops for service here for 5 years. Always prompt, reliable, and reasonably priced. Great support."</p>
-                    <h5 class="font-bold text-brandBlue">- Priya Textiles</h5>
-                </div>
-                <!-- Review 4 -->
-                <div class="min-w-[300px] md:min-w-[350px] snap-center bg-white p-6 sm:p-8 rounded-xl shadow-md border-t-4 border-brandBlue flex-shrink-0">
-                    <div class="text-brandYellow mb-3 text-lg">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4 italic leading-relaxed">"Replaced my laptop battery and upgraded to a fast SSD. The speed difference is amazing and they delivered it on the exact same day. Excellent service!"</p>
-                    <h5 class="font-bold text-brandBlue">- Manoj V.</h5>
-                </div>
-            </div>
-            
-            <div class="text-center text-gray-400 text-xs mt-2 md:hidden animate-pulse">
-                <i class="fa-solid fa-arrows-left-right mr-1"></i> Swipe to read more
+
+                <!-- Right Navigation Arrow -->
+                <button onclick="scrollReviews('right')" class="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 z-20 bg-white text-brandBlue shadow-[0_0_15px_rgba(0,0,0,0.15)] rounded-full w-10 h-10 flex items-center justify-center hover:bg-brandRed hover:text-white transition-colors border border-gray-200" aria-label="Scroll right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
         </section>
 
@@ -329,6 +310,17 @@
         // Initialize Scroll Animations
         AOS.init({ once: true, offset: 50, duration: 800 });
 
+        // Carousel Scroll Logic
+        function scrollReviews(direction) {
+            const container = document.getElementById('reviews-container');
+            const scrollAmount = 320; // Distance to jump on click
+            if (direction === 'left') {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+
         // Phase 4: Dynamic Modal Data
         const serviceData = {
             'laptop': {
@@ -358,17 +350,14 @@
         function openServiceModal(serviceKey) {
             const data = serviceData[serviceKey];
             
-            // Populate Modal Content
             document.getElementById('modalTitle').innerText = data.title;
             document.getElementById('modalDetails').innerText = data.details;
             document.getElementById('modalTurnaround').innerText = data.turnaround;
             document.getElementById('modalPricing').innerText = data.pricing;
             
-            // Swap out Icon safely
             const iconElement = document.getElementById('modalIcon');
             iconElement.className = `fa-solid ${data.icon} text-4xl text-brandRed mb-3`;
             
-            // Display Modal with animation
             const modal = document.getElementById('serviceModal');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
@@ -384,11 +373,56 @@
             }, 200);
         }
         
-        // Close modal if user clicks outside the box
         document.getElementById('serviceModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeServiceModal();
             }
+        });
+
+        // Phase 4: Live Google Maps Reviews Fetch
+        document.addEventListener("DOMContentLoaded", () => {
+            // IMPORTANT: Replace the URL below with your deployed Google Apps Script Web App URL
+            const reviewsApiUrl = 'https://script.google.com/macros/s/AKfycbxzhzGinQP46hkp74a9maOlmC8prXsnfWjgduFgg2TBns2mJhSsMsvY-fuCCkLK6yQ/exec';
+            const container = document.getElementById('reviews-container');
+
+            fetch(reviewsApiUrl)
+                .then(response => response.json())
+                .then(reviews => {
+                    if (reviews.error || reviews.length === 0) {
+                        container.innerHTML = '<p class="w-full text-center text-gray-500">Check out our 5-star reviews on Google Maps!</p>';
+                        return;
+                    }
+                    
+                    container.innerHTML = ''; // Clear loading spinner
+                    
+                    const borders = ['border-brandRed', 'border-brandBlue'];
+                    
+                    reviews.forEach((review, index) => {
+                        if (review.rating < 4) return; // Only show 4 and 5 star reviews
+                        
+                        const stars = Array(review.rating).fill('<i class="fa-solid fa-star"></i>').join('');
+                        const borderColor = borders[index % 2];
+                        
+                        // Strict sizing and text wrapping applied to the card below
+                        const reviewCard = `
+                        <div class="w-[85vw] sm:w-[300px] md:w-[320px] snap-center bg-white p-6 rounded-xl shadow-md border-t-4 ${borderColor} flex-shrink-0 flex flex-col justify-between whitespace-normal">
+                            <div>
+                                <div class="text-brandYellow mb-3 text-lg">${stars}</div>
+                                <p class="text-gray-600 text-sm mb-4 italic leading-relaxed break-words" style="word-break: break-word;">"${review.text}"</p>
+                            </div>
+                            <h5 class="font-bold text-brandBlue mt-auto flex items-center">
+                                <img src="${review.profile_photo_url}" alt="${review.author_name}" class="w-6 h-6 rounded-full mr-2" onerror="this.style.display='none'"> 
+                                ${review.author_name}
+                            </h5>
+                        </div>`;
+                        
+                        container.innerHTML += reviewCard;
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching reviews:', error);
+                    container.innerHTML = '<p class="w-full text-center text-gray-500">Check out our 5-star reviews on Google Maps!</p>';
+                });
         });
     </script>
 </body>
